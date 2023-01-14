@@ -10,7 +10,7 @@ class Queue:
 
     def dequeue(self):
         if (self.isEmpty()):
-            return None
+            raise
         return self._data.pop(0)
 
     def search(self, index):

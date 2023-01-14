@@ -19,11 +19,11 @@ def process(path_file, instance: Queue):
 
 
 def remove(instance: Queue):
-    if instance.isEmpty():
-        print("Não há elementos")
-    else:
+    try:
         path_file = instance.dequeue()["nome_do_arquivo"]
         print(f"Arquivo {path_file} removido com sucesso")
+    except Exception:
+        print("Não há elementos")
 
 
 def file_metadata(instance: Queue, position):
